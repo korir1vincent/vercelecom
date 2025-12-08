@@ -20,10 +20,12 @@ DEBUG = False
 # ALLOWED_HOSTS = []
 
 ALLOWED_HOSTS = [
-    "localhost",
-    "127.0.0.1",
-    "my-ecommerce-db.onrender.com",
+    'my-ecommerce-db.onrender.com',  # your Render web service domain
+    'ecommercebackend-3dnj.onrender.com',  # the URL from your logs
+    '127.0.0.1',  # optional for local testing
+    'localhost',  # optional for local testing
 ]
+
 
 
 # Application definition
@@ -88,13 +90,30 @@ WSGI_APPLICATION = 'car1.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
-DATABASES = {
-    "default": dj_database_url.config(
-        default=os.environ.get("DATABASE_URL"),
-        conn_max_age=600,
-        ssl_require=True
-    )
-}
+
+
+DATABASE_URL = os.environ.get('DATABASE_URL')
+if DATABASE_URL:
+    # Use DATABASE_URL from Render or environment
+    DATABASES = {
+        'default': dj_database_url.parse(DATABASE_URL, conn_max_age=600, ssl_require=True)
+    }
+else:
+    # Local fallback to SQLite
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        }
+    }
+
+# DATABASES = {
+#     "default": dj_database_url.config(
+#         default=os.environ.get("DATABASE_URL"),
+#         conn_max_age=600,
+#         ssl_require=True
+#     )
+# }
 
 # DATABASES = {
 #     'default': {
