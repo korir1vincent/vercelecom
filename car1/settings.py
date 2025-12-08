@@ -14,7 +14,7 @@ SECRET_KEY = 'django-insecure-fasoknni**!479$$56&03pua$bckrb!$1f2g3863u*f3g*$398
 DEBUG = os.environ.get('DEBUG', 'False') == 'True'
 
 ALLOWED_HOSTS = [
-    'ecommercebackend-3dnj.onrender.com',  # Render domain
+    'https://ecommercebackend-3dnj.onrender.com',  # Render domain
     '127.0.0.1',  # Allow internal Render requests
     'localhost',  # Local testing
 ]
