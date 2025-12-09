@@ -229,7 +229,9 @@ def checkout(request):
 
 
     if request.user.is_authenticated:
-        shipping_user = ShippingAddress.objects.get(user__id=request.user.id)
+        shipping_user, created = ShippingAddress.objects.get_or_create(user=request.user)
+
+        # shipping_user = ShippingAddress.objects.get(user__id=request.user.id)
         # Shipping user
         shipping_form = ShippingForm(request.POST or None, instance=shipping_user)
        # Check out as logged in user
