@@ -160,8 +160,8 @@ DEBUG = True
 
 # ALLOWED_HOSTS = []
 
-ALLOWED_HOSTS = ['vercelecom-production.up.railway.app', 'https://vercelecom-production.up.railway.app']
-CSRF_TRUSTED_ORIGINS = ['https://vercelecom-production.up.railway.app']
+ALLOWED_HOSTS = ['shopnasi.up.railway.app', 'https://shopnasi.up.railway.app']
+CSRF_TRUSTED_ORIGINS = ['https://shopnasi.up.railway.app']
 
 
 # CSRF_TRUSTED_ORIGINS = ['https://ecommercebackend-3dnj.onrender.com']
