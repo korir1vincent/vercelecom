@@ -143,10 +143,13 @@
 
 from pathlib import Path
 import os
+from dotenv import load_dotenv
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
+
+load_dotenv()
 
 
 # Quick-start development settings - unsuitable for production
@@ -239,7 +242,7 @@ DATABASES = {
             'ENGINE': 'django.db.backends.postgresql',
             'NAME': 'railway',
             'USER': 'postgres',
-            'PASSWORD': 'uWYcpeKNIQBeDRTIjaOItxhsGERBHwIg',
+            'PASSWORD': os.environ['DB_PASSWORD_YO'],
             'HOST': 'nozomi.proxy.rlwy.net',
             'PORT': '57979',
             
