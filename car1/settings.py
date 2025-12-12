@@ -172,6 +172,7 @@ CSRF_TRUSTED_ORIGINS = ['https://shopnasi.up.railway.app']
 # Application definition
 
 INSTALLED_APPS = [
+    'paypal.standard.ipn',
     'payment',
     'cart',
     'mycar',
@@ -303,3 +304,12 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+# Add paypal settings
+# Set sandbox to true 
+
+PAYPAL_TEST =True
+PAYPAL_RECEIVER_EMAIL = 'business@shopnasitest.com'    #Business sandbox account
+
+
