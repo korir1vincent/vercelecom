@@ -160,8 +160,8 @@ DEBUG = True
 
 # ALLOWED_HOSTS = []
 
-ALLOWED_HOSTS = ['shopnasi.up.railway.app', 'https://shopnasi.up.railway.app']
-CSRF_TRUSTED_ORIGINS = ['https://shopnasi.up.railway.app']
+ALLOWED_HOSTS = ['shopnasi.up.railway.app', '127.0.0.1', 'https://shopnasi.up.railway.app', 'localhost', 'uncankered-arica-forceless.ngrok-free.dev']
+CSRF_TRUSTED_ORIGINS = ['https://shopnasi.up.railway.app', 'https://uncankered-arica-forceless.ngrok-free.dev', 'http://127.0.0.1:8000/']
 
 
 # CSRF_TRUSTED_ORIGINS = ['https://ecommercebackend-3dnj.onrender.com']
