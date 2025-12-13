@@ -10,6 +10,7 @@ GitPython==3.1.45
 gunicorn==23.0.0
 honcho==2.0.0
 idna==3.10
+django-paypal==2.1
 Jinja2==3.1.6
 MarkupSafe==3.0.2
 packaging==25.0
