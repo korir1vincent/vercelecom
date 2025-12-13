@@ -219,7 +219,7 @@ def billing_info(request):
             'item_name': 'ShopNasi orders',
             'no_shipping': '2',
             'invoice': str(uuid.uuid4()),
-            'currency_code': 'Ksh', 
+            'currency_code': 'KES', 
             'notify_url': 'https://{}{}'.format(host, reverse("paypal-ipn")),
             'return_url': 'https://{}{}'.format(host, reverse("payment_success")),
             'cancel_return': 'https://{}{}'.format(host, reverse("payment_failed")),
